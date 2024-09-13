@@ -7,10 +7,7 @@ export const config: Config = {
     sass()
   ],
   outputTargets: [
-    {
-      type: 'dist',
-      esmLoaderPath: '../loader',
-    },
+
     {
       type: 'dist-custom-elements',
       customElementsExportBehavior: 'auto-define-custom-elements',
@@ -26,7 +23,7 @@ export const config: Config = {
     
     angularOutputTarget({
       componentCorePackage: 'inner-growth',
-      outputType: 'component',
+      outputType: 'standalone',
       directivesProxyFile: '../angular-workspace/projects/inner-growth-angular/src/lib/stencil-generated/components.ts',
       directivesArrayFile: '../angular-workspace/projects/inner-growth-angular/src/lib/stencil-generated/index.ts',
     }),
