@@ -1,0 +1,27 @@
+:host {
+  display: block;
+}
+
+.mat-mdc-card-content{
+  color: rgb(26, 27, 31);
+  display: block;
+  font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  padding-bottom: 0px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0px;
+}
+.mat-mdc-card-content:last-child {
+  padding-bottom: 16px;
+}
+
+
+.mat-mdc-card-content:first-child {
+  padding-top: 16px;
+}
+
+.mat-mdc-card-content {
+  display: block;
+  padding: 0 16px;
+}
