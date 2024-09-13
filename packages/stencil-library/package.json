@@ -1,17 +1,17 @@
 {
-  "name": "stencil-library",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "name": "inner-growth",
+  "version": "0.0.2",
+  "description": "Stencil Components for Inner Growth",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/stencil-library/stencil-library.esm.js",
+  "unpkg": "dist/inner-growth/inner-growth.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/stencil-library/stencil-library.esm.js",
-      "require": "./dist/stencil-library/stencil-library.cjs.js"
+      "import": "./dist/inner-growth/inner-growth.esm.js",
+      "require": "./dist/inner-growth/inner-growth.cjs.js"
     },
     "./my-component": {
       "import": "./dist/components/my-component.js",

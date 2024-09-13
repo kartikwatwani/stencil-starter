@@ -2,7 +2,7 @@ import { Config } from '@stencil/core';
 import { angularOutputTarget } from '@stencil/angular-output-target';
 import { sass } from '@stencil/sass';
 export const config: Config = {
-  namespace: 'stencil-library',
+  namespace: 'inner-growth',
   plugins: [
     sass()
   ],
@@ -25,10 +25,10 @@ export const config: Config = {
     },
     
     angularOutputTarget({
-      componentCorePackage: 'stencil-library',
+      componentCorePackage: 'inner-growth',
       outputType: 'component',
-      directivesProxyFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/components.ts',
-      directivesArrayFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/index.ts',
+      directivesProxyFile: '../angular-workspace/projects/inner-growth-angular/src/lib/stencil-generated/components.ts',
+      directivesArrayFile: '../angular-workspace/projects/inner-growth-angular/src/lib/stencil-generated/index.ts',
     }),
   ],
   testing: {
