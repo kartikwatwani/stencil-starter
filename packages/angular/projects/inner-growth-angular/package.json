@@ -1,0 +1,17 @@
+{
+  "name": "inner-growth-angular",
+  "version": "0.0.8",
+  "peerDependencies": {
+    "@angular/common": "^18.2.0",
+    "@angular/core": "^18.2.0",
+   "inner-growth": "*"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+
+  },
+  "devDependencies": {
+
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,52 @@
+{
+  "name": "inner-growth",
+  "version": "0.0.8",
+  "description": "Stencil Components for Inner Growth",
+  "main": "dist/index.cjs.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/inner-growth/inner-growth.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+  },
+  "files": [
+    "dist/",
+    "hydrate/",
+    "standalone/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --prod && rm -f loader/package.json",
+    "build:packages": "npm run api:clear && npm run build  && npm run api:update && npm run docs",
+    "api:clear": "rm -rf docs/guide/api",
+    "api:update": "./scripts/generate_api.sh",
+    "readme": "node ./scripts/generate_readme.mjs",
+    "dev": "stencil build --dev --watch --serve",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
+    "release": "npm run build && npm publish --public --tag pre-release"
+  },
+  "devDependencies": {
+    "@stencil/angular-output-target": "^0.9.0",
+    "@stencil/sass": "^3.0.12",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.5.4",
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0",
+    "puppeteer": "^23.3.0",
+    "@stencil/react-output-target": "^0.7.1",
+    "@stencil/svelte-output-target": "^0.0.3",
+    "@stencil/vue-output-target": "^0.8.9"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@material/card": "^14.0.0",
+    "@material/web": "^2.1.0",
+    "@stencil/core": "^4.21.0"
+  }
+}
