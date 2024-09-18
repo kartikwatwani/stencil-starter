@@ -57,12 +57,17 @@ gulp.task('rename-folder', (done) => {
 
 // Gulp task to install dependencies and run build
 gulp.task('install-packages', shell.task([
-    'npm install', // Root installation
-    'npm install --prefix ./packages/core', // Core package installation
-    'npm install --prefix ./packages/angular', // Angular package installation
-    'npm run build --prefix ./packages/core', // Run build in core package
-    'npm run build --prefix ./packages/angular' // Run build in angular package
+    'npm install', 
+    'npm install --prefix ./packages/core', 
+    'npm install --prefix ./packages/angular',
+    'npm run build --prefix ./packages/core', 
+    'npm run build --prefix ./packages/angular' 
+]));
+
+gulp.task('watch',shell.task([
+    'npm run start --prefix ./packages/core',
+    'npm run start --prefix ./packages/angular' 
 ]));
 
 // Default task to run rename, rename-folder, install packages, and run the build
-gulp.task('default', gulp.series('rename', 'rename-folder', 'install-packages'));
+gulp.task('default', gulp.series('rename', 'rename-folder', 'install-packages', 'watch'));
