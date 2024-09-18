@@ -60,7 +60,8 @@ gulp.task('install-packages', shell.task([
     'npm install', // Root installation
     'npm install --prefix ./packages/core', // Core package installation
     'npm install --prefix ./packages/angular', // Angular package installation
-    'npm run build --prefix ./packages/core' // Run build in core package
+    'npm run build --prefix ./packages/core', // Run build in core package
+    'npm run build --prefix ./packages/angular' // Run build in angular package
 ]));
 
 // Default task to run rename, rename-folder, install packages, and run the build
