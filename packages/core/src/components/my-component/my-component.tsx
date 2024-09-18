@@ -7,6 +7,6 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class MyComponent {
   render() {
-    return <Host>My Component works!</Host>;
+    return <Host>my-library-component works!</Host>;
   }
 }

@@ -10,7 +10,7 @@ const paths = {
 
     angularFolder: './packages/angular/projects/my-library-angular',
     files: [
-        './packages/{core,angular,vue}/**/*.{ts,json,html,md}'
+        './packages/{core,angular,vue}/**/*.{ts,json,html,md,tsx}'
     ]
 };
 
