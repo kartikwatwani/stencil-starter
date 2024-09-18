@@ -7,7 +7,6 @@ const path = require('path');
 
 // Define paths to the relevant files and folders
 const paths = {
-
     angularFolder: './packages/angular/projects/my-library-angular',
     files: [
         './packages/{core,angular,vue}/**/*.{ts,json,html,md,tsx}'
@@ -23,8 +22,6 @@ gulp.task('rename', (done) => {
         done();
         return;
     }
-
-
 
     // Update other files (core, angular, vue)
     gulp.src(paths.files, { base: './' })
@@ -55,6 +52,19 @@ gulp.task('rename-folder', (done) => {
     done();
 });
 
+// Gulp task to update GitHub origin
+gulp.task('update-origin', (done) => {
+    const origin = argv.origin;
+    if (origin) {
+        const originUrl = `https://github.com/${origin}.git`;
+        shell.task([`git remote set-url origin ${originUrl}`])();
+        console.log(`Updated GitHub origin to: ${originUrl}`);
+    } else {
+        console.log('No --origin parameter passed, skipping origin update.');
+    }
+    done();
+});
+
 // Gulp task to install dependencies and run build
 gulp.task('install-packages', shell.task([
     'npm install', 
@@ -64,10 +74,11 @@ gulp.task('install-packages', shell.task([
     'npm run build --prefix ./packages/angular' 
 ]));
 
-gulp.task('watch',shell.task([
+// Gulp task to start watching
+gulp.task('watch', shell.task([
     'npm run start --prefix ./packages/core',
     'npm run start --prefix ./packages/angular' 
 ]));
 
-// Default task to run rename, rename-folder, install packages, and run the build
-gulp.task('default', gulp.series('rename', 'rename-folder', 'install-packages', 'watch'));
+// Default task to run all tasks
+gulp.task('default', gulp.series('rename', 'rename-folder', 'update-origin', 'install-packages', 'watch'));
