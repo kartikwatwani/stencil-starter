@@ -6,214 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MatCard {
+    interface MyComponent {
     }
-    interface MatCardActions {
-    }
-    interface MatCardAvatar {
-    }
-    interface MatCardContent {
-    }
-    interface MatCardHeader {
-    }
-    interface MatCardImage {
-        "src": string;
-    }
-    interface MatCardSubtitle {
-    }
-    interface MatCardTitle {
-    }
-    interface QuestionsViewer {
-        "questions": any[];
-    }
-    interface TheJourneyBegins {
-    }
-    interface YogaVideos {
-        /**
-          * The list of videos
-         */
-        "videos": ({ videoId: string; thumbnail: string; title: string; } | { videoId: string; thumbnail: string; title?: undefined; })[];
-    }
-    interface YoutubePlayer {
-        "height": string;
-        "pause": () => Promise<void>;
-        "play": (video: string) => Promise<void>;
-        "stop": () => Promise<void>;
-        "videoId": string;
-        "width": string;
-    }
-}
-export interface YoutubePlayerCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLYoutubePlayerElement;
 }
 declare global {
-    interface HTMLMatCardElement extends Components.MatCard, HTMLStencilElement {
+    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
-    var HTMLMatCardElement: {
-        prototype: HTMLMatCardElement;
-        new (): HTMLMatCardElement;
-    };
-    interface HTMLMatCardActionsElement extends Components.MatCardActions, HTMLStencilElement {
-    }
-    var HTMLMatCardActionsElement: {
-        prototype: HTMLMatCardActionsElement;
-        new (): HTMLMatCardActionsElement;
-    };
-    interface HTMLMatCardAvatarElement extends Components.MatCardAvatar, HTMLStencilElement {
-    }
-    var HTMLMatCardAvatarElement: {
-        prototype: HTMLMatCardAvatarElement;
-        new (): HTMLMatCardAvatarElement;
-    };
-    interface HTMLMatCardContentElement extends Components.MatCardContent, HTMLStencilElement {
-    }
-    var HTMLMatCardContentElement: {
-        prototype: HTMLMatCardContentElement;
-        new (): HTMLMatCardContentElement;
-    };
-    interface HTMLMatCardHeaderElement extends Components.MatCardHeader, HTMLStencilElement {
-    }
-    var HTMLMatCardHeaderElement: {
-        prototype: HTMLMatCardHeaderElement;
-        new (): HTMLMatCardHeaderElement;
-    };
-    interface HTMLMatCardImageElement extends Components.MatCardImage, HTMLStencilElement {
-    }
-    var HTMLMatCardImageElement: {
-        prototype: HTMLMatCardImageElement;
-        new (): HTMLMatCardImageElement;
-    };
-    interface HTMLMatCardSubtitleElement extends Components.MatCardSubtitle, HTMLStencilElement {
-    }
-    var HTMLMatCardSubtitleElement: {
-        prototype: HTMLMatCardSubtitleElement;
-        new (): HTMLMatCardSubtitleElement;
-    };
-    interface HTMLMatCardTitleElement extends Components.MatCardTitle, HTMLStencilElement {
-    }
-    var HTMLMatCardTitleElement: {
-        prototype: HTMLMatCardTitleElement;
-        new (): HTMLMatCardTitleElement;
-    };
-    interface HTMLQuestionsViewerElement extends Components.QuestionsViewer, HTMLStencilElement {
-    }
-    var HTMLQuestionsViewerElement: {
-        prototype: HTMLQuestionsViewerElement;
-        new (): HTMLQuestionsViewerElement;
-    };
-    interface HTMLTheJourneyBeginsElement extends Components.TheJourneyBegins, HTMLStencilElement {
-    }
-    var HTMLTheJourneyBeginsElement: {
-        prototype: HTMLTheJourneyBeginsElement;
-        new (): HTMLTheJourneyBeginsElement;
-    };
-    interface HTMLYogaVideosElement extends Components.YogaVideos, HTMLStencilElement {
-    }
-    var HTMLYogaVideosElement: {
-        prototype: HTMLYogaVideosElement;
-        new (): HTMLYogaVideosElement;
-    };
-    interface HTMLYoutubePlayerElementEventMap {
-        "ready": any;
-        "stateChange": any;
-    }
-    interface HTMLYoutubePlayerElement extends Components.YoutubePlayer, HTMLStencilElement {
-        addEventListener<K extends keyof HTMLYoutubePlayerElementEventMap>(type: K, listener: (this: HTMLYoutubePlayerElement, ev: YoutubePlayerCustomEvent<HTMLYoutubePlayerElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLYoutubePlayerElementEventMap>(type: K, listener: (this: HTMLYoutubePlayerElement, ev: YoutubePlayerCustomEvent<HTMLYoutubePlayerElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
-    }
-    var HTMLYoutubePlayerElement: {
-        prototype: HTMLYoutubePlayerElement;
-        new (): HTMLYoutubePlayerElement;
+    var HTMLMyComponentElement: {
+        prototype: HTMLMyComponentElement;
+        new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
-        "mat-card": HTMLMatCardElement;
-        "mat-card-actions": HTMLMatCardActionsElement;
-        "mat-card-avatar": HTMLMatCardAvatarElement;
-        "mat-card-content": HTMLMatCardContentElement;
-        "mat-card-header": HTMLMatCardHeaderElement;
-        "mat-card-image": HTMLMatCardImageElement;
-        "mat-card-subtitle": HTMLMatCardSubtitleElement;
-        "mat-card-title": HTMLMatCardTitleElement;
-        "questions-viewer": HTMLQuestionsViewerElement;
-        "the-journey-begins": HTMLTheJourneyBeginsElement;
-        "yoga-videos": HTMLYogaVideosElement;
-        "youtube-player": HTMLYoutubePlayerElement;
+        "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
-    interface MatCard {
-    }
-    interface MatCardActions {
-    }
-    interface MatCardAvatar {
-    }
-    interface MatCardContent {
-    }
-    interface MatCardHeader {
-    }
-    interface MatCardImage {
-        "src"?: string;
-    }
-    interface MatCardSubtitle {
-    }
-    interface MatCardTitle {
-    }
-    interface QuestionsViewer {
-        "questions"?: any[];
-    }
-    interface TheJourneyBegins {
-    }
-    interface YogaVideos {
-        /**
-          * The list of videos
-         */
-        "videos"?: ({ videoId: string; thumbnail: string; title: string; } | { videoId: string; thumbnail: string; title?: undefined; })[];
-    }
-    interface YoutubePlayer {
-        "height"?: string;
-        "onReady"?: (event: YoutubePlayerCustomEvent<any>) => void;
-        "onStateChange"?: (event: YoutubePlayerCustomEvent<any>) => void;
-        "videoId"?: string;
-        "width"?: string;
+    interface MyComponent {
     }
     interface IntrinsicElements {
-        "mat-card": MatCard;
-        "mat-card-actions": MatCardActions;
-        "mat-card-avatar": MatCardAvatar;
-        "mat-card-content": MatCardContent;
-        "mat-card-header": MatCardHeader;
-        "mat-card-image": MatCardImage;
-        "mat-card-subtitle": MatCardSubtitle;
-        "mat-card-title": MatCardTitle;
-        "questions-viewer": QuestionsViewer;
-        "the-journey-begins": TheJourneyBegins;
-        "yoga-videos": YogaVideos;
-        "youtube-player": YoutubePlayer;
+        "my-component": MyComponent;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "mat-card": LocalJSX.MatCard & JSXBase.HTMLAttributes<HTMLMatCardElement>;
-            "mat-card-actions": LocalJSX.MatCardActions & JSXBase.HTMLAttributes<HTMLMatCardActionsElement>;
-            "mat-card-avatar": LocalJSX.MatCardAvatar & JSXBase.HTMLAttributes<HTMLMatCardAvatarElement>;
-            "mat-card-content": LocalJSX.MatCardContent & JSXBase.HTMLAttributes<HTMLMatCardContentElement>;
-            "mat-card-header": LocalJSX.MatCardHeader & JSXBase.HTMLAttributes<HTMLMatCardHeaderElement>;
-            "mat-card-image": LocalJSX.MatCardImage & JSXBase.HTMLAttributes<HTMLMatCardImageElement>;
-            "mat-card-subtitle": LocalJSX.MatCardSubtitle & JSXBase.HTMLAttributes<HTMLMatCardSubtitleElement>;
-            "mat-card-title": LocalJSX.MatCardTitle & JSXBase.HTMLAttributes<HTMLMatCardTitleElement>;
-            "questions-viewer": LocalJSX.QuestionsViewer & JSXBase.HTMLAttributes<HTMLQuestionsViewerElement>;
-            "the-journey-begins": LocalJSX.TheJourneyBegins & JSXBase.HTMLAttributes<HTMLTheJourneyBeginsElement>;
-            "yoga-videos": LocalJSX.YogaVideos & JSXBase.HTMLAttributes<HTMLYogaVideosElement>;
-            "youtube-player": LocalJSX.YoutubePlayer & JSXBase.HTMLAttributes<HTMLYoutubePlayerElement>;
+            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
 }

@@ -4,8 +4,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "inner-growth-angular": [
-        "./dist/inner-growth-angular"
+      "my-library-angular": [
+        "./dist/my-library-angular"
       ]
     },
     "outDir": "./dist/out-tsc",

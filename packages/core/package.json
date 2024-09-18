@@ -1,13 +1,13 @@
 {
-  "name": "inner-growth",
-  "version": "0.0.8",
+  "name": "my-library",
+  "version": "0.1.0",
   "description": "Stencil Components for Inner Growth",
   "main": "dist/index.cjs.js",
   "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/inner-growth/inner-growth.esm.js",
+  "unpkg": "dist/my-library/my-library.esm.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
@@ -29,7 +29,7 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "release": "npm run build && npm publish --public --tag pre-release"
+    "release": "npm run build && npm publish --public --tag latest"
   },
   "devDependencies": {
     "@stencil/angular-output-target": "^0.9.0",

@@ -1,0 +1,17 @@
+{
+  "name": "my-library-angular",
+  "version": "0.1.0",
+  "peerDependencies": {
+    "@angular/common": "^18.2.0",
+    "@angular/core": "^18.2.0",
+    "my-library": "*"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+
+  },
+  "devDependencies": {
+
+  },
+  "sideEffects": false
+}

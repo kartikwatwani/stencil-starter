@@ -8,20 +8,12 @@ import { vueOutputTarget } from '@stencil/vue-output-target';
 // Uncomment the following line if you have a custom event list plugin
 // import { eventListOutputTarget } from './scripts/event-list.plugin';
 
-const componentCorePackage = 'inner-growth';
+const componentCorePackage = 'my-library';
 const parent = './packages';
 const entry = 'index.ts';
-
+const companyName = 'Workern';
 const excludeComponents = [
-  'mat-card',
-  'mat-card-actions',
-  'mat-card-content',
-  'mat-card-header',
-  'mat-card-image',
-  'mat-card-subtitle',
-  'mat-card-title',
-  'mat-card-avatar',
-  'questions-viewer'
+
   
 ];
 
@@ -38,7 +30,7 @@ export const config: Config = {
   hashFileNames: false,
   autoprefixCss: false,
   minifyCss: true,
-  preamble: 'Built by Workern',
+  preamble: `Built by ${companyName}`,
   hashedFileNameLength: 8,
   invisiblePrehydration: false,
   extras: {
@@ -49,7 +41,7 @@ export const config: Config = {
     slotChildNodesFix: false,
     enableImportInjection: true,
   },
-  namespace: 'inner-growth',
+  namespace: 'my-library',
   taskQueue: 'async',
   globalStyle: 'src/globals/variables.scss',
   validatePrimaryPackageOutputTarget: true,
@@ -75,8 +67,8 @@ export const config: Config = {
       componentCorePackage,
       outputType: 'standalone',
       customElementsDir: customElementsDir,
-      directivesProxyFile: angularPath('inner-growth-angular', 'components.ts'),
-      directivesArrayFile: angularPath('inner-growth-angular', entry),
+      directivesProxyFile: angularPath('my-library-angular', 'components.ts'),
+      directivesArrayFile: angularPath('my-library-angular', entry),
       excludeComponents,
     }),
     // svelteOutputTarget({
@@ -111,7 +103,7 @@ export const config: Config = {
     {
       type: 'docs-readme',
       dir: './docs/guide/api',
-      footer: '*Built with ❤️ by Workern*',
+      footer: `*Built with ❤️ by ${companyName}*`,
     },
     {
       type: 'docs-vscode',

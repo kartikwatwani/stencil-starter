@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "inner-growth-angular": {
+    "my-library-angular": {
       "projectType": "library",
-      "root": "projects/inner-growth-angular",
-      "sourceRoot": "projects/inner-growth-angular/src",
+      "root": "projects/my-library-angular",
+      "sourceRoot": "projects/my-library-angular/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/inner-growth-angular/ng-package.json"
+            "project": "projects/my-library-angular/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/inner-growth-angular/tsconfig.lib.prod.json"
+              "tsConfig": "projects/my-library-angular/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/inner-growth-angular/tsconfig.lib.json"
+              "tsConfig": "projects/my-library-angular/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/inner-growth-angular/tsconfig.spec.json",
+            "tsConfig": "projects/my-library-angular/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

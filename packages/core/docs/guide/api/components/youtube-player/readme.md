@@ -1,6 +1,4 @@
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -10,7 +8,6 @@
 | `videoId` | `video-id` |             | `string` | `undefined` |
 | `width`   | `width`    |             | `string` | `undefined` |
 
-
 ## Events
 
 | Event         | Description | Type               |
@@ -18,22 +15,15 @@
 | `ready`       |             | `CustomEvent<any>` |
 | `stateChange` |             | `CustomEvent<any>` |
 
-
 ## Methods
 
 ### `pause() => Promise<void>`
-
-
 
 #### Returns
 
 Type: `Promise<void>`
 
-
-
 ### `play(video: string) => Promise<void>`
-
-
 
 #### Parameters
 
@@ -45,32 +35,26 @@ Type: `Promise<void>`
 
 Type: `Promise<void>`
 
-
-
 ### `stop() => Promise<void>`
-
-
 
 #### Returns
 
 Type: `Promise<void>`
 
-
-
-
 ## Dependencies
 
 ### Used by
 
- - [inner-growth](../inner-growth)
+- [my-library](../my-library)
 
 ### Graph
+
 ```mermaid
 graph TD;
-  inner-growth --> youtube-player
+  my-library --> youtube-player
   style youtube-player fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
-*Built with ❤️ by Workern*
+_Built with ❤️ by Workern_

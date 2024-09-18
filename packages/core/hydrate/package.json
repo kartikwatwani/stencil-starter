@@ -1,6 +1,6 @@
 {
-  "name": "inner-growth/hydrate",
-  "description": "InnerGrowth component hydration app.",
+  "name": "my-library/hydrate",
+  "description": "MyLibrary component hydration app.",
   "main": "index.js",
   "types": "index.d.ts",
   "exports": {
