@@ -1,7 +1,3 @@
-Certainly! An effective README should be clear, concise, and provide all necessary instructions to get started with the project. Here's an improved version of the README for your repository, with enhancements for clarity and formatting:
-
----
-
 # Stencil Starter
 
 Welcome to Stencil, stencil starter designed for seamless integration across various platforms including Stencil, Angular, and Vue. This document will guide you through the process of starting and optionally renaming the library, updating the repository origin, and setting up the development environment.
