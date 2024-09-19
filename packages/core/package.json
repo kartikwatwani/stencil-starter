@@ -31,6 +31,26 @@
     "generate": "stencil generate",
     "release": "npm run build && npm publish --public --tag latest"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./standalone": {
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./standalone/my-component.js": {
+      "import": "./standalone/my-component.js",
+      "types": "./standalone/my-component.d.ts"
+    },
+    "./loader": {
+      "import": "./loader/index.js",
+      "require": "./loader/index.cjs",
+      "types": "./loader/index.d.ts"
+    }
+  },
   "devDependencies": {
     "@stencil/angular-output-target": "^0.9.0",
     "@stencil/sass": "^3.0.12",

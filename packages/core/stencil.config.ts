@@ -80,10 +80,9 @@ export const config: Config = {
     // }),
     {
       type: 'dist-custom-elements',
-      customElementsExportBehavior: 'single-export-module',
+      customElementsExportBehavior: 'auto-define-custom-elements',
       minify: true,
       dir: customElementsDir,
-    
       generateTypeDeclarations: true,
       empty: true,
       copy: [
